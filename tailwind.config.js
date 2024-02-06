@@ -31,9 +31,20 @@ module.exports = {
         'primary': '#CC2D4A',
         'secondary': '#8FA206',
         'tertiary': '#61AEC9',
+        'fourth': '#CCCCCC',
       },
       fontFamily:{
         Montserrat: ['Monserrat', 'sans-serif']
+      },
+      spacing:{
+        'vh/2': '50vh',
+      },
+      aspectRatio:{
+        '1/1': '1 / 1',
+        '8/10': '8 / 10'
+      },
+      gridTemplateRows:{
+        '4/1': '4fr 1fr'
       }
     },
   },
@@ -41,5 +52,7 @@ module.exports = {
     require('@tailwindcss/aspect-ratio'),
     require("@tailwindcss/forms"),
 		require("@tailwindcss/typography"),
+    require('tailwind-scrollbar-hide'),
+    "prettier-plugin-tailwindcss"
   ],
 }

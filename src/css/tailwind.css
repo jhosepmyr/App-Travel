@@ -2,3 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 @tailwind variants;
+
+@layer base {
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    input:focus{
+        outline: none !important;
+        border: none !important;
+        --tw-ring-color: none !important;
+    }
+}
+@layer components {
+    .without-scrollbar{
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    .without-scrollbar::-webkit-scrollbar{
+        @apply w-0;
+    }
+}

@@ -1,18 +1,225 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/tailwind.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/tailwind.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
     <title>App Travel</title>
-</head>
-<body>
-    <h1 class="underline font-Montserrat text-lg">
-        Hello world!
-    </h1>
-    <div class="w-64 h-64 bg-secondary"></div>
-</body>
+  </head>
+  <body>
+    <header class="hidden">
+      <nav></nav>
+    </header>
+    <main class="w-full">
+      <section
+        id="home"
+        class="w-full h-vh/2 grid grid-rows-2 justify-center bg-sanFrancisco bg-center bg-no-repeat bg-cover"
+      >
+        <label
+          class="w-full min-w-72 mt-14 px-4 py-2 flex justify-center items-center justify-self-center self-start rounded-full overflow-hidden bg-white"
+          for="search"
+        >
+          <i class="text-primary bi bi-search"></i>
+          <input
+            class="p-0 w-fit border-none text-center"
+            type="text"
+            id="search"
+            placeholder="San Francisco"
+          />
+        </label>
+        <button
+          class="w-fit mb-10 px-10 py-3 self-end justify-self-center rounded-full bg-white text-primary font-semibold"
+        >
+          Explore More
+        </button>
+      </section>
+      <section class="p-4" id="locations">
+        <h2 class="text-3xl text-primary font-bold my-3">Our Recomendations</h2>
+        <div
+          class="w-full py-2 flex flex-row justify-between space-x-2 overflow-x-auto without-scrollbar"
+        >
+          <figure
+            class="w-1/2 min-w-40 max-w-52 aspect-1/1 grid grid-rows-4/1 bg-secondary rounded-lg overflow-hidden shadow-md"
+          >
+            <img
+              class="w-full h-full object-cover"
+              src="./img/norway.jpg"
+              alt=""
+            />
+            <figcaption
+              class="grid px-1 py-2 justify-start items-center text-white"
+            >
+              <h4 class="text-sm font-semibold">Norway</h4>
+              <p class="text-xs">Beautiful landscapes</p>
+            </figcaption>
+          </figure>
+          <figure
+            class="w-1/2 min-w-40 max-w-52 aspect-1/1 grid grid-rows-4/1 bg-white rounded-lg overflow-hidden shadow-md"
+          >
+            <img
+              class="w-full h-full object-cover"
+              src="./img/new_york.jpg"
+              alt=""
+            />
+            <figcaption
+              class="grid px-1 py-2 justify-start items-center text-tertiary"
+            >
+              <h4 class="text-sm font-semibold">New York</h4>
+              <p class="text-xs">Concrete jungle</p>
+            </figcaption>
+          </figure>
+          <figure
+            class="w-1/2 min-w-40 max-w-52 aspect-1/1 grid grid-rows-4/1 bg-secondary rounded-lg overflow-hidden shadow-md"
+          >
+            <img
+              class="w-full h-full object-cover"
+              src="./img/yosemite.jpg"
+              alt=""
+            />
+            <figcaption
+              class="grid px-1 py-2 justify-start items-center text-white"
+            >
+              <h4 class="text-sm font-semibold">Yosemite</h4>
+              <p class="text-xs">A break from the world</p>
+            </figcaption>
+          </figure>
+          <figure
+            class="w-1/2 min-w-40 max-w-52 aspect-1/1 grid grid-rows-4/1 bg-white rounded-lg overflow-hidden shadow-md"
+          >
+            <img
+              class="w-full h-full object-cover"
+              src="./img/seattle.jpg"
+              alt=""
+            />
+            <figcaption
+              class="grid px-1 py-2 justify-start items-center text-secondary"
+            >
+              <h4 class="text-sm font-semibold">Seatle</h4>
+              <p class="text-xs">Big city</p>
+            </figcaption>
+          </figure>
+          <figure
+            class="w-1/2 min-w-40 max-w-52 aspect-1/1 grid grid-rows-4/1 bg-secondary rounded-lg overflow-hidden shadow-md"
+          >
+            <img
+              class="w-full h-full object-cover"
+              src="./img/switzerland.jpg"
+              alt=""
+            />
+            <figcaption
+              class="grid px-1 py-2 justify-start items-center text-white"
+            >
+              <h4 class="text-sm font-semibold">Switzerland</h4>
+              <p class="text-xs">Big city</p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="p-4" id="stays">
+        <h2 class="text-3xl text-primary font-bold my-3">Trending Stays</h2>
+        <div class="grid grid-flow-row gap-6 justify-center">
+          <article
+            class="w-full aspect-8/10 max-w-72 px-3 py-6 flex flex-col gap-2 bg-chicago bg-no-repeat bg-center bg-cover rounded-xl text-white"
+          >
+            <h3 class="text-2xl font-bold">Chicago</h3>
+            <p class="w-4/5">2 rooms, bathroom and kitchen</p>
+          </article>
+          <article
+            class="w-full aspect-8/10 max-w-72 px-3 py-6 flex flex-col gap-2 bg-LA bg-no-repeat bg-center bg-cover rounded-xl text-white"
+          >
+            <h3 class="text-2xl font-bold">Los Angeles</h3>
+            <p class="w-4/5">4 rooms, 3 bathrooms, kitchen and private pool.</p>
+          </article>
+          <article
+            class="w-full aspect-8/10 max-w-72 px-3 py-6 flex flex-col gap-2 bg-miami bg-no-repeat bg-center bg-cover rounded-xl text-white"
+          >
+            <h3 class="text-2xl font-bold">Miami</h3>
+            <p class="w-4/5">
+              3 rooms, 2 bathrooms, kitchen and amazing sea view.
+            </p>
+          </article>
+          <article
+            class="w-full aspect-8/10 max-w-72 px-3 py-6 flex flex-col gap-2 bg-bali bg-no-repeat bg-center bg-cover rounded-xl text-white"
+          >
+            <h3 class="text-2xl font-bold">Bali</h3>
+            <p class="w-4/5">2 rooms, 2 bathrooms, kitchen and private pool.</p>
+          </article>
+        </div>
+      </section>
+      <section class="p-4" id="FAQs">
+        <h2 class="text-3xl text-primary font-bold my-3">
+          Frequently Asked Questions FAQs
+        </h2>
+        <div class="flex flex-col gap-5">
+          <div class="flex flex-col gap-2">
+            <h3 class="text-2xl text-primary font-semibold">Payment Methods</h3>
+            <p>
+              We accept VISA, MasterCard, American Express, Paypal and Binance.
+            </p>
+          </div>
+          <div class="flex flex-col gap-2">
+            <h3 class="text-2xl text-primary font-semibold">
+              Cancellation Policy
+            </h3>
+            <p>
+              We accept VISA, MasterCard, American Express, Paypal and Binance.
+            </p>
+          </div>
+          <div class="flex flex-col gap-2">
+            <h3 class="text-2xl text-primary font-semibold">Long Stays</h3>
+            <p>
+              We accept VISA, MasterCard, American Express, Paypal and Binance.
+            </p>
+          </div>
+          <div class="flex flex-col gap-2">
+            <h3 class="text-2xl text-primary font-semibold">
+              Cancellation Policy
+            </h3>
+            <p>
+              We accept VISA, MasterCard, American Express, Paypal and Binance.
+            </p>
+          </div>
+          <div class="flex flex-col gap-2">
+            <h3 class="text-2xl text-primary font-semibold">
+              Cancellation Policy
+            </h3>
+            <p>
+              We accept VISA, MasterCard, American Express, Paypal and Binance.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section class="p-4 text-fourth" id="about-us">
+        <h2 class="text-2xl font-semibold my-3">About Us</h2>
+        <ul class="flex flex-col gap-2">
+          <li><a href="">Investors</a></li>
+          <li><a href="">Jobs</a></li>
+          <li><a href="">Privacy policy</a></li>
+          <li><a href="">Terms and Conditions</a></li>
+          <li><a href="">Travel Inc</a></li>
+          <li>Follow us</li>
+          <li class="flex flex-row gap-2 text-3xl">
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-twitter"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+            <a href=""><i class="bi bi-youtube"></i></a>
+            <a href=""><i class="bi bi-pinterest"></i></a>
+          </li>
+        </ul>
+      </section>
+    </footer>
+  </body>
 </html>
