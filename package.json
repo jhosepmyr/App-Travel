@@ -5,5 +5,10 @@
     "@tailwindcss/typography": "^0.5.10",
     "tailwindcss": "^3.4.1"
   },
-  "dev": "npx tailwindcss -i ./src/css/tailwind.css -o ./public/css/tailwind.css --watch"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tailwindcss -i ./src/css/tailwind.css -o ./public/css/tailwind.css --watch"
+  },
+  "author": "jhosepmyr gutierrez",
+  "license": "ISC"
 }
