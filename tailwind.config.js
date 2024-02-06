@@ -38,6 +38,7 @@ module.exports = {
       },
       spacing:{
         'vh/2': '50vh',
+        '90vw': '90vw'
       },
       aspectRatio:{
         '1/1': '1 / 1',
@@ -45,6 +46,9 @@ module.exports = {
       },
       gridTemplateRows:{
         '4/1': '4fr 1fr'
+      },
+      transitionProperty: {
+        'width': 'width'
       }
     },
   },
