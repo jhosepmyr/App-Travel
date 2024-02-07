@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{html,js}", "./public/*.{html,js}"],
+  darkMode: 'class',
   theme: {
     extend: {
       backgroundImage: {
@@ -42,10 +43,17 @@ module.exports = {
       },
       aspectRatio:{
         '1/1': '1 / 1',
-        '8/10': '8 / 10'
+        '8/10': '8 / 10',
+        '2/1': '2 / 1',
+        '1/2': '1 / 2',
+        'normal': 'auto'
+      },
+      gridTemplateColumns:{
+        '1-2': '1fr 2fr'
       },
       gridTemplateRows:{
-        '4/1': '4fr 1fr'
+        '4/1': '4fr 1fr',
+        '4-auto': 'repeat(4, auto)',
       },
       transitionProperty: {
         'width': 'width'
