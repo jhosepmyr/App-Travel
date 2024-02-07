@@ -11,7 +11,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "tw:build": "npx tailwindcss -i ./src/css/tailwind.css -o ./public/css/tailwind.css --watch",
     "prettier:check": "npx prettier --check ./public/index.html",
-    "prettier:write": "npx prettier --write ./public/index.html"
+    "prettier:write": "npx prettier --write ./public/index.html",
+    "tw:minify": "npx tailwindcss -i ./src/css/tailwind.css -o ./public/css/tailwind.css --minify"
   },
   "author": "jhosepmyr gutierrez",
   "license": "ISC",
