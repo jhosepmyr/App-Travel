@@ -15,11 +15,46 @@
       rel="stylesheet"
     />
     <title>App Travel</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/theme-toggles@4.10.1/css/expand.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/theme-toggles@4.10.1/css/lightbulb.min.css"
+    />
   </head>
   <body class="relative font-Montserrat dark:bg-gray-900">
-    <button class="fixed lg:hidden right-0 top-0 z-30 px-7 py-2 m-5 drop-shadow-lg dark:bg-white bg-gray-900 text-primary text-xl rounded-full" id="toggleDarkMode">
-      <i class="bi bi-moon-fill cursor-pointer" id="toggleDarkMode-mobile"></i>
-    </button>
+    <div
+      class="fixed flex items-center justify-center w-24 h-10 lg:hidden right-0 top-0 z-30 px-7 py-2 m-5 drop-shadow-lg dark:bg-white bg-gray-900 text-primary rounded-full"
+      id="toggleDarkMode-mobile"
+    >
+      <button
+        id="moon-sun"
+        class="h-full aspect-1 theme-toggle"
+        type="button"
+        title="Toggle theme"
+        aria-label="Toggle theme"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          fill="currentColor"
+          class="theme-toggle__expand"
+          viewBox="0 0 32 32"
+        >
+          <clipPath id="theme-toggle__expand__cutout">
+            <path d="M0-11h25a1 1 0 0017 13v30H0Z" />
+          </clipPath>
+          <g clip-path="url(#theme-toggle__expand__cutout)">
+            <circle cx="16" cy="16" r="8.4" />
+            <path
+              d="M18.3 3.2c0 1.3-1 2.3-2.3 2.3s-2.3-1-2.3-2.3S14.7.9 16 .9s2.3 1 2.3 2.3zm-4.6 25.6c0-1.3 1-2.3 2.3-2.3s2.3 1 2.3 2.3-1 2.3-2.3 2.3-2.3-1-2.3-2.3zm15.1-10.5c-1.3 0-2.3-1-2.3-2.3s1-2.3 2.3-2.3 2.3 1 2.3 2.3-1 2.3-2.3 2.3zM3.2 13.7c1.3 0 2.3 1 2.3 2.3s-1 2.3-2.3 2.3S.9 17.3.9 16s1-2.3 2.3-2.3zm5.8-7C9 7.9 7.9 9 6.7 9S4.4 8 4.4 6.7s1-2.3 2.3-2.3S9 5.4 9 6.7zm16.3 21c-1.3 0-2.3-1-2.3-2.3s1-2.3 2.3-2.3 2.3 1 2.3 2.3-1 2.3-2.3 2.3zm2.4-21c0 1.3-1 2.3-2.3 2.3S23 7.9 23 6.7s1-2.3 2.3-2.3 2.4 1 2.4 2.3zM6.7 23C8 23 9 24 9 25.3s-1 2.3-2.3 2.3-2.3-1-2.3-2.3 1-2.3 2.3-2.3z"
+            />
+          </g>
+        </svg>
+      </button>
+    </div>
     <header
       class="fixed z-20 hidden w-full pl-2 pr-12 py-4 text-primary lg:flex flex-row justify-between items-center bg-white font-bold dark:bg-gray-800 dark:text-white"
     >
@@ -31,9 +66,47 @@
         <li><a href="#about-us">About Us</a></li>
       </ul>
       <div class="flex flex-row gap-4 text-lg">
-        <i class="bi bi-search cursor-pointer"></i>
-        <i class="bi bi-moon-fill cursor-pointer dark:text-primary" id="toggleDarkMode-desktop"></i>
-        <i class="bi bi-person-fill cursor-pointer"></i>
+        <i class="flex items-center bi bi-search cursor-pointer"></i>
+        <button
+          id="toggleDarkMode-desktop"
+          class="w-8 relative bottom-1 flex items-start cursor-pointer dark:text-primary theme-toggle"
+          type="button"
+          title="Toggle theme"
+          aria-label="Toggle theme"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            class="theme-toggle__lightbulb"
+            stroke-width="1"
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-linecap="round"
+            viewBox="0 0 32 32"
+          >
+            <path
+              stroke-width="0"
+              d="M9.4 9.9c1.8-1.8 4.1-2.7 6.6-2.7 5.1 0 9.3 4.2 9.3 9.3 0 2.3-.8 4.4-2.3 6.1-.7.8-2 2.8-2.5 4.4 0 .2-.2.4-.5.4-.2 0-.4-.2-.4-.5v-.1c.5-1.8 2-3.9 2.7-4.8 1.4-1.5 2.1-3.5 2.1-5.6 0-4.7-3.7-8.5-8.4-8.5-2.3 0-4.4.9-5.9 2.5-1.6 1.6-2.5 3.7-2.5 6 0 2.1.7 4 2.1 5.6.8.9 2.2 2.9 2.7 4.9 0 .2-.1.5-.4.5h-.1c-.2 0-.4-.1-.4-.4-.5-1.7-1.8-3.7-2.5-4.5-1.5-1.7-2.3-3.9-2.3-6.1 0-2.3 1-4.7 2.7-6.5z"
+            />
+            <path d="M19.8 28.3h-7.6" />
+            <path d="M19.8 29.5h-7.6" />
+            <path d="M19.8 30.7h-7.6" />
+            <path
+              pathLength="1"
+              class="theme-toggle__lightbulb__coil"
+              fill="none"
+              d="M14.6 27.1c0-3.4 0-6.8-.1-10.2-.2-1-1.1-1.7-2-1.7-1.2-.1-2.3 1-2.2 2.3.1 1 .9 1.9 2.1 2h7.2c1.1-.1 2-1 2.1-2 .1-1.2-1-2.3-2.2-2.3-.9 0-1.7.7-2 1.7 0 3.4 0 6.8-.1 10.2"
+            />
+            <g class="theme-toggle__lightbulb__rays">
+              <path pathLength="1" d="M16 6.4V1.3" />
+              <path pathLength="1" d="M26.3 15.8h5.1" />
+              <path pathLength="1" d="m22.6 9 3.7-3.6" />
+              <path pathLength="1" d="M9.4 9 5.7 5.4" />
+              <path pathLength="1" d="M5.7 15.8H.6" />
+            </g>
+          </svg>
+        </button>
+        <i class="flex items-center bi bi-person-fill cursor-pointer"></i>
       </div>
     </header>
     <main class="w-full">
@@ -65,7 +138,9 @@
         </button>
       </section>
       <section class="p-4 lg:scroll-m-14" id="locations">
-        <h2 class="text-3xl text-primary font-bold my-3 dark:text-white">Our Recomendations</h2>
+        <h2 class="text-3xl text-primary font-bold my-3 dark:text-white">
+          Our Recomendations
+        </h2>
         <div
           class="w-full py-4 flex flex-row justify-between space-x-2 overflow-x-auto without-scrollbar"
         >
@@ -147,7 +222,9 @@
         </div>
       </section>
       <section class="p-4 lg:scroll-m-14" id="stays">
-        <h2 class="text-3xl text-primary dark:text-white font-bold my-3">Trending Stays</h2>
+        <h2 class="text-3xl text-primary dark:text-white font-bold my-3">
+          Trending Stays
+        </h2>
         <div
           class="grid grid-flow-row gap-6 justify-center lg:grid-cols-1-2 lg:grid-rows-4-auto"
         >
@@ -185,7 +262,9 @@
         </h2>
         <div class="flex flex-col gap-5 dark:text-white">
           <div class="flex flex-col gap-2">
-            <h3 class="text-2xl text-primary dark:text-white font-semibold">Payment Methods</h3>
+            <h3 class="text-2xl text-primary dark:text-white font-semibold">
+              Payment Methods
+            </h3>
             <p>
               We accept VISA, MasterCard, American Express, Paypal and Binance.
             </p>
@@ -199,7 +278,9 @@
             </p>
           </div>
           <div class="flex flex-col gap-2">
-            <h3 class="text-2xl text-primary dark:text-white font-semibold">Long Stays</h3>
+            <h3 class="text-2xl text-primary dark:text-white font-semibold">
+              Long Stays
+            </h3>
             <p>
               We accept VISA, MasterCard, American Express, Paypal and Binance.
             </p>
